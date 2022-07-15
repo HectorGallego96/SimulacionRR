@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+
+
+</head>
+<body>
+
+<header>
+    <nav class=" navbar navbar-danger bg-danger ">
+        <div class="container">
+
+            <h1 class="display-6 text-white ">
+                Comidas Rapidas
+            </h1>
+            <img src="img/carrito.png" alt="" width="100" height="100">
+        </div>
+
+    </nav>
+</header>
+
+
+<section class="mt-5 ">
+    <div class="container">
+        <div class="formulario row">
+            <div class="col-md-2 col-sm-12">
+                <label for="comidas" class="labelDatos form-label size-3 ">Ingresar pedido</label>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example" name="comidas"
+                        id="comidas">
+                    <option value="comida1">Hamburguesa</option>
+                    <option value="comida1">Salchipapa</option>
+                    <option value="comida1">PerroCaliente</option>
+                    <option value="comida1">Pizza</option>
+                </select>
+            </div>
+            <div class="col-md-2 col-sm-12 ">
+                <button class="btn btn-danger m-2 " id="btnAgregar">Agregar</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class=" pedidos-ingresados ">
+</div>
+
+<div class="btn-iniciar row">
+    <button id="ejecucion" class="btn btn-danger m-2 " type="button"><img src="img/play.png" > Iniciar Ejecución</button>
+    <button onclick="location.reload()" id="limpiar" class="btn btn-danger m-2 " type="button"><img src="img/clean.png" > Limpiar</button>
+
+</div>
+
+<div class="row m-4">
+
+
+    <div class="col-md-4 col-sm-12" >
+        <h3 class="mb-4">Pedidos en Procesamiento</h3>
+        <div class="lista ">
+
+            <div id="filaProcesamiento" class="itemsFila">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-12">
+        <h3 class="mb-4">Pedidos Procesados</h3>
+        <div class="lista">
+
+
+            <div id="filaEntregado" class="itemsFila">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4">
+        <h3 class="mb-4">Tabla de Resultados</h3>
+        <table class="table">
+            <thead>
+            <tr class=" table-danger">
+                <th scope="col">Proceso</th>
+                <th scope="col">Rafagas</th>
+                <th scope="col">Tiempo de Espera</th>
+                <th scope="col">Tiempo de Respuesta</th>
+            </tr>
+            </thead>
+            <tbody class="t-body">
+            </tbody>
+        </table>
+        <div class="datos">
+            <div class="quantum"></div>
+            <div class="media-espera"></div>
+            <div class="media-respuesta"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer class="bg-danger text-center text-white ">
+
+    <div class="container p-4 pb-0">
+        <section class="mb-4">
+            <p>Simulación Algoritmo Round Robin  </p>
+
+        </section>
+        <section class="mb-4">
+            icons by
+            <a target="_blank" href="https://icons8.com"> Icons8</a>
+        </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p class="text-white"> Universidad de Cartagena</p>
+
+    </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.labelDatos {
+    font-size: 1.5rem;
+
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pedidos-ingresados {
+
+    margin: 4em 2em 4em 2em;
+    width: auto;
+    padding: 2em;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #efefef;
+    border-radius: 3em;
+    border: solid rgba(220, 53, 69, 0.2) 1px;
+
+
+
+
+}
+.tarjeta{
+
+    display: inline-block;
+    width: 18rem;
+    margin: 1em;
+
+}
+.btn-iniciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4em;
+
+}
+.btn-iniciar button{
+   width: 15em;
+    font-size: 1.5rem;
+}
+
+.lista{
+
+    max-height: 20em;
+
+    background-color: #efefef;
+    overflow-y: auto;
+
+    border-radius: 20px;
+    border: solid rgba(220, 53, 69, 0.2) 1px;
+
+}
+
+.itemsFila{
+    margin: 2em;
+}
+
+.item-proce{
+
+    padding: 1em;
+    margin-bottom: 1em;
+
+    background-color: #ff5e5e;
+    color: #ffffff;
+    border-radius: 10px;
+
+
+}
+
+.item-ent{
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #719866;
+    color: white;
+    border-radius: 10px;
+}
+.datos{
+    font-size: 1.2rem;
+}
+footer{
+    margin-top: 7em;
+}
