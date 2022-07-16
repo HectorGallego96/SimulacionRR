@@ -9,15 +9,23 @@ let btnAgregar = document.querySelector("#btnAgregar");
 let btnEjecucion = document.querySelector("#ejecucion");
 let filaIngresados = document.querySelector(".pedidos-ingresados");
 let combo = document.querySelector("#comidas");
+
 let filaProcesamiento = document.querySelector("#filaProcesamiento");
 let filaEntregado = document.querySelector("#filaEntregado");
+
 let tabla = document.querySelector(".table")
 let tBody = tabla.querySelector(".t-body")
 let mediaRespuesta = document.querySelector(".media-respuesta")
 let mediaEspera = document.querySelector(".media-espera")
 let divQuantum = document.querySelector(".quantum");
 
-
+let fondoIngresados = document.querySelector(".fondo_ingresados");
+let fondoProcesamiento = document.querySelector(".fondo_procesamiento");
+let fondoProcesados = document.querySelector(".fondo_procesado");
+let fondoResultados = document.querySelector(".fondo_resultados");
+let divIngresados = document.querySelector(".pedidos-ingresados");
+let lProcesamiento = document.querySelector(".lista");
+let lProcesados = document.querySelector(".l-procesado");
 // contador de numero de orden
 let contNumOrden = 0;
 
@@ -180,10 +188,8 @@ const calcularTiempoPromedio = (procesos, numeroProcesos, rafagas, quantum) => {
     tiemposEspera = new Array(numeroProcesos).fill(0);
     tiemposRespuesta = new Array(numeroProcesos).fill(0);
 
-
     calcularTiempoDeEspera(procesos, numeroProcesos, rafagas, tiemposEspera, quantum);
     calcularTiempoDeRespuesta(procesos, numeroProcesos, rafagas, tiemposEspera, tiemposRespuesta);
-
 
 }
 
@@ -198,7 +204,7 @@ const delay = millis =>
  fn = recive una funcion;
  repet = las veces que se quiere repetir esa funcion
  millis = tiempo de espera entre la llamada de cada funcion
- ...args = lista de argumentos para ejecutar la funcion (opcional)
+ ...args = lProcesamiento de argumentos para ejecutar la funcion (opcional)
 */
 const interLock = async (fn, repeat, millis, ...args) => {
     for (let i = 0; i < repeat - 1; ++i) {
@@ -215,6 +221,9 @@ const funcionesProcesamiento = {
     // y representarlos graficamente
     simulacionProcesamiento: function () {
 
+        fondoProcesamiento.style.display = "none";
+        lProcesamiento.style.display = "block";
+
         let div = document.createElement("div");
         div.textContent = "Numero Orden: " + listaPreparacion[cont] + "- Pedido: " + filaPedidos.items[listaPreparacion[cont]].pedido + " - Ejecutandose...";
         div.classList.add("item-proce");
@@ -230,6 +239,9 @@ const funcionesProcesamiento = {
     // y representarlos graficamente
     simulacionProcesados: function () {
 
+        fondoProcesados.style.display = "none";
+        lProcesados.style.display = "block";
+
         let div = document.createElement("div");
         div.textContent = listaPreparados[cont2];
         div.textContent = "Numero Orden: " + listaPreparados[cont2] + "- Pedido: " + filaPedidos.items[listaPreparados[cont2]].pedido + " - Ejecutado ";
@@ -244,6 +256,8 @@ const funcionesProcesamiento = {
     },
 
     imprimiTabla: function () {
+
+        fondoResultados.style.display = "none";
         let contTiempoEspera = 0
         let contTiempoRespuesta = 0
 
@@ -292,6 +306,7 @@ const funcionesProcesamiento = {
 // funcion simulacion procesamiento RR
 function iniciarProcesamientoRR() {
 
+    document.querySelector('#process').scrollIntoView();
 
     numeroProceso = filaPedidos.getSize();
 
@@ -318,6 +333,9 @@ btnEjecucion.addEventListener("click", iniciarProcesamientoRR);
 // evento para agregar elementos a la cola
 btnAgregar.addEventListener("click", function (event) {
     event.preventDefault();
+
+    fondoIngresados.style.display = "none";
+    divIngresados.style.display = "block";
 
     const comida = combo.options[combo.selectedIndex].text;
     const pedido = new Pedido(contNumOrden++, comida, 5);

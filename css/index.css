@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .labelDatos {
     font-size: 1.5rem;
 
@@ -12,26 +16,33 @@
 
 .pedidos-ingresados {
 
-    margin: 4em 2em 4em 2em;
+    margin: 4rem 15% 4rem 15%;
     width: auto;
     padding: 2em;
     overflow-y: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    background-color: #efefef;
     border-radius: 3em;
     border: solid rgba(220, 53, 69, 0.2) 1px;
-
-
-
+    background: #efefef;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
-.tarjeta{
 
+
+
+
+
+.fondo_ingresados{
+    height: 20rem;
+}
+.tarjeta{
     display: inline-block;
     width: 18rem;
     margin: 1em;
-
 }
 .btn-iniciar{
     display: flex;
@@ -46,15 +57,20 @@
 }
 
 .lista{
-
-    max-height: 20em;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #efefef;
     overflow-y: auto;
-
+    height: 500px;
+    max-height: 500px;
     border-radius: 20px;
     border: solid rgba(220, 53, 69, 0.2) 1px;
 
+}
+
+.lista img{
+    height: 20rem;
 }
 
 .itemsFila{
@@ -72,7 +88,17 @@
 
 
 }
+.tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tabla img{
+    height: 300px;
+    margin-top: 10%;
 
+}
 .item-ent{
     padding: 1em;
     margin-bottom: 1em;

@@ -53,6 +53,7 @@
 
 
 <div class=" pedidos-ingresados ">
+    <img class="fondo_ingresados" src="img/barbacoa.svg">
 </div>
 
 <div class="btn-iniciar row">
@@ -64,10 +65,10 @@
 <div class="row m-4">
 
 
-    <div class="col-md-4 col-sm-12" >
+    <div id="process" class="col-md-4 col-sm-12" >
         <h3 class="mb-4">Pedidos en Procesamiento</h3>
-        <div class="lista ">
-
+        <div class="lista">
+            <img class="fondo_procesamiento" src="img/process.svg">
             <div id="filaProcesamiento" class="itemsFila">
 
             </div>
@@ -77,29 +78,37 @@
 
     <div class="col-md-4 col-sm-12">
         <h3 class="mb-4">Pedidos Procesados</h3>
-        <div class="lista">
+        <div class="lista l-procesado">
 
-
+            <img class="fondo_procesado" src="img/succes.svg">
             <div id="filaEntregado" class="itemsFila">
-
             </div>
+
         </div>
     </div>
 
-    <div class="col-md-4 col-sm-4">
+    <div class=" col-md-4 col-sm-4">
         <h3 class="mb-4">Tabla de Resultados</h3>
-        <table class="table">
-            <thead>
-            <tr class=" table-danger">
-                <th scope="col">Proceso</th>
-                <th scope="col">Rafagas</th>
-                <th scope="col">Tiempo de Espera</th>
-                <th scope="col">Tiempo de Respuesta</th>
-            </tr>
-            </thead>
-            <tbody class="t-body">
-            </tbody>
-        </table>
+
+        <div class="tabla">
+            <table class="table">
+
+                <thead>
+                <tr class=" table-danger">
+                    <th scope="col">Proceso</th>
+                    <th scope="col">Rafagas</th>
+                    <th scope="col">Tiempo de Espera</th>
+                    <th scope="col">Tiempo de Respuesta</th>
+                </tr>
+                </thead>
+                <tbody class="t-body">
+
+                </tbody>
+
+
+            </table>
+            <img class="fondo_resultados"  src="img/data.svg">
+        </div>
         <div class="datos">
             <div class="quantum"></div>
             <div class="media-espera"></div>
@@ -125,7 +134,7 @@
     </div>
 
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p class="text-white"> Universidad de Cartagena</p>
+
 
     </div>
 
